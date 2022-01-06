@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+      h1 {
+        font-style: italic;
+      }
+      .a {
+        font-style: oblique;
+      }
+      .b {
+        font-size: 15px;
+        font-family: "Verdana", sans-serif;
+      }
+
+      .bg {
+        background-image: url("https://image.freepik.com/free-vector/creative-frame-layout-from-tropical-background-with-exotic-palm-leaves-plants-isolated-pink-background-flat-lay-nature-concept_78681-109.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .form {
+        border-radius: 20px;
+        border: groove;
+        align-items: center;
+        margin: 50px;
+        background-color: lightblue;
+        opacity: 80%;
+      }
+      .form-element {
+        margin: 20px;
+      }
+      .box {
+        width: 30vw;
+        height: 20vh;
+      }
+
+      input:valid {
+        color: green;
+      }
+
+      input:invalid {
+        color: red;
+      }
+    </style>
+  </head>
+  <body class="bg">
+    <h1 class="text-center" id="title">Merry Christmas</h1>
+    <p class="text-center a" id="description">This is my first form</p>
+    <form id="survey-form" class="form text-center">
+      <div class="form-element">
+        <label class="b" for="name" id="name-label">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div class="form-element b">
+        <label for="email" id="email-label">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <div class="form-element b">
+        <label for="number" id="number-label">Age </label>
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="18"
+          max="65"
+          placeholder="Enter your age"
+          required
+        />
+      </div>
+      <div class="b">
+        <label for="dropdown b">Which language you prefer</label>
+        <select name="dropdown" id="dropdown">
+          <option value="javascript">Javascript</option>
+          <option value="php">PHP</option>
+          <option value="c++">C++</option>
+          <option value="java">Java</option>
+        </select>
+      </div>
+      <p class="b">Select department</p>
+      <div>
+        <label for="stockholm">Stockholm</label>
+        <input
+          type="radio"
+          name="city"
+          id="stockholm"
+          value="stockholm"
+        /><br />
+        <label for="malmo">Malmo</label>
+        <input type="radio" name="city" id="malmo" value="malmo" /><br />
+        <label for="gothenburg">Gothenburg</label>
+        <input type="radio" name="city" id="gothenburg" value="gothenburg" />
+      </div>
+
+      <p class="b">What is most important thing for you in your work</p>
+      <div>
+        <label for="salary">Good salary</label>
+        <input type="checkbox" name="preference1" id="salary" value="salary" />
+        <label for="location">Close to home</label>
+        <input
+          type="checkbox"
+          name="preference2"
+          id="location"
+          value="location"
+        />
+        <label for="surround">Good surround</label>
+        <input
+          type="checkbox"
+          name="preference3"
+          id="surround"
+          value="surround"
+        />
+      </div>
+      <textarea
+        class="form-element box"
+        name="comments"
+        id=""
+        cols="60"
+        rows="10"
+      >
+Additional comments.</textarea
+      >
+      <div class="form-element">
+        <input type="submit" value="Submit" id="submit" />
+      </div>
+    </form>
+  </body>
+</html>
