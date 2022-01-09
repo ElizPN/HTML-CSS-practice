@@ -6,89 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Landing page</title>
     <style>
+  
+     .iBox {
+       width: 80%;
+       display: inline;
+     }
+        #header { 
+        position: fixed;
+       width: 100%;
+       height: 80px;
+       background-color: lightcoral;
+       
+     }
+     .topnav a {
+       display: block;
+       float: right;
+       color: slategrey;
+       text-decoration: none;
+       text-align: center;
+       padding: 14px 16px;
+       background-color: lightcoral;
+
+     }
      
-      .iBox {
-        width: 80%;
-        display: inline;
-      }
-      #header {
-        width: 100%;
-        height: auto;
-        background-color: lightcoral;
-        
-      }
-      .topnav a {
-        display: block;
-        float: right;
-        color: slategrey;
-        text-decoration: none;
-        text-align: center;
-        padding: 14px 16px;
-        background-color: lightcoral;
+     .topnav a:hover {
+       background-color: #ddd;
+       color: black;
+     } 
+     @media (max-width: 500px) {
+       .topnav a {
+         float: none;
+         width: 100%;
+       }
+     }
+     .email {
+       margin: 10%;
+       width: 50%;
+       border: 3px black;
+       padding: 30px;
+     }
+     .product {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       width: calc(100% / 3); /*  20% */
+       margin: 10px;
+       border: 1px solid #000;
+       border-radius: 3px;
+         }
 
-      }
-      
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      } 
-      @media (max-width: 500px) {
-        .topnav a {
-          float: none;
-          width: 100%;
-        }
-      }
-      .center {
-        margin: auto;
-        width: 50%;
-        border: 3px black;
-        padding: 30px;
-      }
-      .product {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: calc(100% / 3); /*  20% */
-        margin: 10px;
-        border: 1px solid #000;
-        border-radius: 3px;
-          }
+     .product > .period {
+   background-color: #ddd;
+   color: black;
+   padding: 15px 0;
+   width: 100%;
+   text-transform: uppercase;
+   font-weight: 700;
+     }
 
-      .product > .period {
-    background-color: #ddd;
-    color: black;
-    padding: 15px 0;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: 700;
-      }
-
-      .btn {
-        color:lightseagreen;
-        background-color: gold;
-        cursor: pointer;
-        
-      }
-
+     .btn {
+       color:lightseagreen;
+       background-color: gold;
+       cursor: pointer;
+       
+     }
     </style>
   </head>
   <body>
-    <div id="page-wrapper">
     <header id="header">
-      <div class="logo iBox">
-        <img
-          width="200"
-          height="100"
-          src="https://png.pngtree.com/template/20190727/ourlarge/pngtree-open-book-icon-simple-illustration-of-open-book-vector-icon-image_283605.jpg"
-          alt=""
-        />
-      </div>
       <nav class="iBox topnav" id="nav-bar">
         <a class="nav-link" href="#service">Our service</a>
         <a class="nav-link" href="#working">How it works</a>
         <a class="nav-link" href="#pricing">Pricing</a>
       </nav>
+      <div class="logo iBox">
+        <img id="header-img"
+          width="100"
+          height="100"
+          src="https://icon-library.com/images/small-book-icon/small-book-icon-17.jpg"
+          alt=""
+        />
+      </div>
+   
     </header><br>
     <form
       
@@ -96,7 +96,7 @@
       action="https://www.freecodecamp.org/email-submit"
       id="form"
     >
-    <div class="center" >
+    <div class="email" >
       <p>Subscribe for news</p>
       <label for="email"></label>
       <input
@@ -106,13 +106,11 @@
         placeholder="Enter your email adress"
         required
       />
-    <!-- </div> -->
-      <!-- <div class="center"> -->
-        <input type="submit" value="Submit" />
+      <label for="submit"></label>
+        <input id="submit" type="submit" value="Submit" />
       </div>
     </form>
     <section id="service">
-      Our service
       <div> 
         <h2>Free reading</h2>
         <p>Most popular books are waiting your visit in our shop.<br>
@@ -129,13 +127,11 @@
     </section>
 
     <section id="working">
-      How it works
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/v=_napNH0D0Ws?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe id="video" width="420" height="315" src="https://www.youtube.com/embed/v=_napNH0D0Ws?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <!-- <div><video src="https://youtu.be/IczIXVJPvdE"></video></div> -->
     </section>
 
     <section id="pricing">
-      Pricing
       <div class="product">
         <div class="period">For one month</div>
         <h2>30$</h2>
@@ -155,5 +151,8 @@
       </div>
     </section>
   </body>
-</div>
+</html>
+
+
+
 </html>
