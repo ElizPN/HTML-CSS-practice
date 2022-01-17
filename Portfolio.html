@@ -5,22 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+
+    <style>
+      .container {
+        width: 100%;
+        background: cadetblue;
+      }
+      #projects {
+        display: grid;
+      }
+      .project-tile {
+        background-color: dimgray;
+        width: 25%;
+        margin-top: 0%;
+        padding-top: 30px;
+      }
+
+      img {
+        width: 25%;
+      }
+    </style>
   </head>
   <body>
-    <nav></nav>
-    <section id="welcome-section">
-      <h1>Hey I am Liza</h1>
-    </section>
-    <section id="projects">
-      <h2>These are some of my projects</h2>
-      <div class="project-tile">
-        <a href="https://codepen.io/ccojbbqp-the-scripter/pen/PoJRqXQ">
-          <img
-            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
-            alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"
-          />
-          <p>Tribute page</p>
-        </a>
+    <div class="container">
+      <nav></nav>
+      <section id="welcome-section">
+        <h1>Hey I am Liza</h1>
+      </section>
+      <section id="projects">
+        <h2>These are some of my projects</h2>
+        <div class="project">
+          <a href="https://codepen.io/ccojbbqp-the-scripter/pen/PoJRqXQ">
+            <img
+              src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+              alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"
+            />
+          </a>
+          <div class="project-tile">
+            <p>Tribute page</p>
+          </div>
+        </div>
+
         <a href="https://codepen.io/ccojbbqp-the-scripter/pen/YzrjPoR">
           <img
             src="https://dc686.4shared.com/img/VJK3QpFfiq/s24/17e5f0a36e0/Screenshot_2022-01-15_at_19111?async&rand=0.9357895694584133"
@@ -42,10 +67,10 @@
           />
           <p>Landing page</p>
         </a>
-      </div>
-    </section>
-    <div></div>
-    <section></section>
-    <footer></footer>
+      </section>
+      <div></div>
+      <section></section>
+      <footer></footer>
+    </div>
   </body>
 </html>
