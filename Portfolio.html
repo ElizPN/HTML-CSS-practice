@@ -7,70 +7,144 @@
     <title>Portfolio</title>
 
     <style>
-      .container {
+      /* .container {
         width: 100%;
         background: cadetblue;
+      } */
+      * {
+        margin: 0;
       }
-      #projects {
-        display: grid;
-      }
-      .project-tile {
-        background-color: dimgray;
-        width: 25%;
-        margin-top: 0%;
-        padding-top: 30px;
+      @media (min-width: 300px) {
+        #welcome-section {
+          align-items: center;
+          justify-content: center;
+        }
       }
 
+      #welcome-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        height: 100vh;
+        color: blanchedalmond;
+        background-color: black;
+        background-image: linear-gradient(to right, black, gray);
+
+        /* text-align: center; */
+      }
+      .wrap {
+        width: 100%;
+        background: cadetblue;
+        padding: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        text-decoration-line: underline;
+        color: floralwhite;
+      }
+      #projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+        min-height: 100vh;
+        background-color: hsla(73, 71%, 50%, 0.938);
+        background-image: linear-gradient(
+          to left,
+          hsla(73, 71%, 50%, 0.938),
+          hsla(73, 17%, 16%, 0.938)
+        );
+      }
+      .project {
+        width: 30%;
+        /* height: 150px; */
+        margin: 10px;
+        background-color: #303841;
+
+        border-radius: 5px;
+      }
       img {
+        width: 100%;
+      }
+      .project-tile {
         width: 25%;
+        margin-top: 0%;
+        margin: auto;
+        padding-top: 30px;
+        /* text-align: center; */
+      }
+      .project-tile p {
+        color: gainsboro;
+        margin: auto;
+      }
+      a {
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <nav></nav>
-      <section id="welcome-section">
-        <h1>Hey I am Liza</h1>
-      </section>
-      <section id="projects">
-        <h2>These are some of my projects</h2>
-        <div class="project">
-          <a href="https://codepen.io/ccojbbqp-the-scripter/pen/PoJRqXQ">
-            <img
-              src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
-              alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"
-            />
-          </a>
+    <nav></nav>
+    <section id="welcome-section">
+      <h1>Hey I am Liza</h1>
+      <p>I stady CSS</p>
+    </section>
+    <div class="wrap">
+      <h2>These are some of my projects</h2>
+    </div>
+    <section id="projects">
+      <div class="project">
+        <a href="https://codepen.io/ccojbbqp-the-scripter/pen/PoJRqXQ">
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+            alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"
+          />
           <div class="project-tile">
             <p>Tribute page</p>
           </div>
-        </div>
+        </a>
+      </div>
 
+      <div class="project">
         <a href="https://codepen.io/ccojbbqp-the-scripter/pen/YzrjPoR">
           <img
             src="https://dc686.4shared.com/img/VJK3QpFfiq/s24/17e5f0a36e0/Screenshot_2022-01-15_at_19111?async&rand=0.9357895694584133"
             alt="Screenshot"
           />
-          <p>Survey form</p>
+          <div class="project-tile">
+            <p>Survey form</p>
+          </div>
         </a>
+      </div>
+
+      <div class="project">
         <a href="https://codepen.io/ccojbbqp-the-scripter/pen/qBPQpBz">
           <img
             src="https://dc585.4shared.com/img/b_GAe83lea/s23/17e5f240c28/Screenshot_2022-01-15_at_21031"
             alt=""
           />
-          <p>Technical Documentation Page</p>
+          <div class="project-tile">
+            <p>Technical Documentation Page</p>
+          </div>
         </a>
+      </div>
+
+      <div class="project">
         <a href="https://codepen.io/ccojbbqp-the-scripter/pen/vYezpyZ">
           <img
             src="https://dc585.4shared.com/img/Wn64yI_Wea/s23/17e5f2417e0/Screenshot_2022-01-15_at_21072"
             alt=""
           />
-          <p>Landing page</p>
+          <div class="project-tile">
+            <p>Landing page</p>
+          </div>
         </a>
-      </section>
-      <div></div>
-      <section></section>
-      <footer></footer>
-    </div>
+      </div>
+    </section>
+    <div></div>
+    <section></section>
+    <footer></footer>
   </body>
 </html>
