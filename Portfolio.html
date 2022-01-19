@@ -7,26 +7,21 @@
     <title>Portfolio</title>
 
     <style>
-      /* .container {
+      .container {
         width: 100%;
-        background: cadetblue;
-      } */
+      }
+
       * {
         margin: 0;
       }
-      @media (min-width: 300px) {
-        #welcome-section {
-          align-items: center;
-          justify-content: center;
-        }
-      }
 
-      #welcome-section {
+      #welcome-section,
+      #contact {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        max-width: 100%;
+        width: 100%;
         height: 100vh;
         color: blanchedalmond;
         background-color: black;
@@ -34,10 +29,8 @@
 
         /* text-align: center; */
       }
-      .wrap {
-        width: 100%;
-        background: cadetblue;
-        padding: 20px;
+      h1 {
+        /* position: relative; */
       }
 
       h2 {
@@ -45,11 +38,22 @@
         text-decoration-line: underline;
         color: floralwhite;
       }
+      .wrap {
+        width: 100%;
+        background-color: hsla(73, 71%, 50%, 0.938);
+        background-image: linear-gradient(
+          to left,
+          hsla(73, 71%, 50%, 0.938),
+          hsla(73, 17%, 16%, 0.938)
+        );
+        padding: 20px 0;
+      }
+
       #projects {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 100%;
+        width: 100%;
         min-height: 100vh;
         background-color: hsla(73, 71%, 50%, 0.938);
         background-image: linear-gradient(
@@ -58,14 +62,26 @@
           hsla(73, 17%, 16%, 0.938)
         );
       }
+
       .project {
         width: 30%;
-        /* height: 150px; */
         margin: 10px;
         background-color: #303841;
-
         border-radius: 5px;
       }
+
+      @media (max-width: 1000px) {
+        .project {
+          width: 45%;
+        }
+      }
+
+      @media (max-width: 670px) {
+        .project {
+          width: 95%;
+        }
+      }
+
       img {
         width: 100%;
       }
@@ -80,71 +96,114 @@
         color: gainsboro;
         margin: auto;
       }
+      .contact-links {
+        padding-top: 30px;
+      }
+      .contact-links a {
+        color: gainsboro;
+        padding-top: 30px;
+      }
       a {
         text-decoration: none;
+      }
+      nav {
+        padding: 30px;
+        background-color: rgb(82, 27, 8);
+        position: fixed;
+        width: 100%;
+      }
+      nav a {
+        float: left;
+        color: gainsboro;
+        font-size: 25px;
+        padding: 14px 16px;
+      }
+      @media (max-width: 500px) {
+        nav a {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
       }
     </style>
   </head>
   <body>
-    <nav></nav>
-    <section id="welcome-section">
-      <h1>Hey I am Liza</h1>
-      <p>I stady CSS</p>
-    </section>
-    <div class="wrap">
-      <h2>These are some of my projects</h2>
+    <div class="container">
+      <nav id="navbar">
+        <a href="#welcome-section">About</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <section id="welcome-section">
+        <h1>Hey I am Liza</h1>
+        <p>I study CSS</p>
+      </section>
+      <div class="wrap">
+        <h2>These are some of my projects</h2>
+      </div>
+      <section id="projects">
+        <div class="project">
+          <a href="https://codepen.io/ccojbbqp-the-scripter/pen/PoJRqXQ">
+            <img
+              src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+              alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"
+            />
+            <div class="project-tile">
+              <p>Tribute page</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project">
+          <a href="https://codepen.io/ccojbbqp-the-scripter/pen/YzrjPoR">
+            <img
+              src="https://dc686.4shared.com/img/VJK3QpFfiq/s24/17e5f0a36e0/Screenshot_2022-01-15_at_19111?async&rand=0.9357895694584133"
+              alt="Screenshot"
+            />
+            <div class="project-tile">
+              <p>Survey form</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project">
+          <a href="https://codepen.io/ccojbbqp-the-scripter/pen/qBPQpBz">
+            <img
+              src="https://dc585.4shared.com/img/b_GAe83lea/s23/17e5f240c28/Screenshot_2022-01-15_at_21031"
+              alt=""
+            />
+            <div class="project-tile">
+              <p>Technical Documentation Page</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project">
+          <a href="https://codepen.io/ccojbbqp-the-scripter/pen/vYezpyZ">
+            <img
+              src="https://dc585.4shared.com/img/Wn64yI_Wea/s23/17e5f2417e0/Screenshot_2022-01-15_at_21072"
+              alt=""
+            />
+            <div class="project-tile">
+              <p>Landing page</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="contact-header">
+          <h1>Let's work together...</h1>
+        </div>
+        <div class="contact-links">
+          <a id="profile-link" href="https://github.com/ElizPN" target="blank"
+            >GitHub</a
+          >
+          <a id="profile-link" href="https://www.facebook.com/" target="blank"
+            >Facebook</a
+          >
+        </div>
+      </section>
+      <footer></footer>
     </div>
-    <section id="projects">
-      <div class="project">
-        <a href="https://codepen.io/ccojbbqp-the-scripter/pen/PoJRqXQ">
-          <img
-            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
-            alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"
-          />
-          <div class="project-tile">
-            <p>Tribute page</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="project">
-        <a href="https://codepen.io/ccojbbqp-the-scripter/pen/YzrjPoR">
-          <img
-            src="https://dc686.4shared.com/img/VJK3QpFfiq/s24/17e5f0a36e0/Screenshot_2022-01-15_at_19111?async&rand=0.9357895694584133"
-            alt="Screenshot"
-          />
-          <div class="project-tile">
-            <p>Survey form</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="project">
-        <a href="https://codepen.io/ccojbbqp-the-scripter/pen/qBPQpBz">
-          <img
-            src="https://dc585.4shared.com/img/b_GAe83lea/s23/17e5f240c28/Screenshot_2022-01-15_at_21031"
-            alt=""
-          />
-          <div class="project-tile">
-            <p>Technical Documentation Page</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="project">
-        <a href="https://codepen.io/ccojbbqp-the-scripter/pen/vYezpyZ">
-          <img
-            src="https://dc585.4shared.com/img/Wn64yI_Wea/s23/17e5f2417e0/Screenshot_2022-01-15_at_21072"
-            alt=""
-          />
-          <div class="project-tile">
-            <p>Landing page</p>
-          </div>
-        </a>
-      </div>
-    </section>
-    <div></div>
-    <section></section>
-    <footer></footer>
   </body>
 </html>
