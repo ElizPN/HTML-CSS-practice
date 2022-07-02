@@ -1,8 +1,42 @@
  table {
      color: green;
+     border-radius: 8px;
+     border: 2px solid red
  }
 
  [href= "#ideveloper"]  {
     color: orange;
 
  }
+
+ .privet {
+    color: purple
+ }
+
+ .bold {
+    font-weight: bold
+ }
+
+ #ideveloper {
+    font-weight: bold;
+ }
+
+ html tr {
+    color: yellow
+ }
+
+ .list > li {
+    color: blue
+    
+ }
+  .font-size-md {
+    size :17px
+  }
+
+
+ .font-size-md.color-red {
+  color : red
+ }
+  .font-size-md.color-gray {
+      color: gray
+  }
